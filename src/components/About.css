@@ -1,0 +1,187 @@
+.about-section {
+  min-height: auto;
+  padding: 40px 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.about-section h2 {
+  font-size: 52px;
+  color: white;
+  margin-bottom: 15px;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.about-section > p {
+  color: #94a3b8;
+  max-width: 700px;
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.stats-grid {
+  width: 100%;
+  max-width: 1200px;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 10px;
+}
+
+.stat-card {
+
+  background: rgba(18, 24, 38, 0.75);
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  border-radius: 22px;
+
+  padding: 30px 25px;
+
+  backdrop-filter: blur(18px);
+
+  transition: .35s ease;
+
+  text-align: center;
+
+  cursor: pointer;
+
+  overflow: hidden;
+
+  position: relative;
+}
+
+.stat-card::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+left:-120%;
+
+width:100%;
+height:100%;
+
+background:linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.08),
+transparent
+);
+
+transition:.8s;
+
+}
+
+.stat-card:hover::before{
+
+left:120%;
+
+}
+
+.stat-card:hover{
+
+transform:translateY(-12px);
+
+box-shadow:0 15px 35px rgba(37,99,235,.35);
+
+border-color:#2563eb;
+
+}
+
+.stat-icon{
+
+width:85px;
+height:85px;
+
+margin:auto;
+
+border-radius:50%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:34px;
+
+color:#60a5fa;
+
+background:rgba(37,99,235,.15);
+
+margin-bottom:25px;
+
+transition:.35s;
+
+}
+
+.stat-card:hover .stat-icon{
+
+transform:rotate(12deg) scale(1.15);
+
+background:#2563eb;
+
+color:white;
+
+}
+
+.stat-card h3{
+
+font-size:42px;
+
+color:white;
+
+margin-bottom:10px;
+
+}
+
+.stat-card h4{
+
+font-size:22px;
+
+color:#60a5fa;
+
+margin-bottom:8px;
+
+}
+
+.stat-card p{
+
+color:#94a3b8;
+
+font-size:16px;
+
+}
+
+@media(max-width:1000px){
+
+.stats-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:700px){
+
+.stats-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.about-section h2{
+
+font-size:38px;
+
+}
+
+}
