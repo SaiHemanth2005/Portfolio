@@ -89,7 +89,11 @@ export default function Contact() {
           LinkedIn
         </a>
 
-        <a href="/Resume.pdf" download>
+        <a 
+          href="https://drive.google.com/file/d/161lPQn0MxBZVeHqkSg1MFJOeVsdFq5V8/preview"
+          target="_blank"
+          rel="noopener noreferrer"
+          >
           <FaFileDownload />
           Resume
         </a>
